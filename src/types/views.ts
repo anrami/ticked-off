@@ -5,7 +5,7 @@ export interface HabitProgress {
     goal: number;
 }
 
-export interface MontlyView {
+export interface MonthlyView {
     month: number;
     year: number;
     habits: Habit[];

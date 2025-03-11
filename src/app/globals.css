@@ -14,9 +14,30 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fff;
+    --foreground: #ffffff;
   }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #0a0a0a;
+  padding: 1rem;
+}
+
+.navbar-left .logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
 }
 
 body {
