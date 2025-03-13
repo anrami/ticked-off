@@ -73,12 +73,12 @@ export default function HabitCalendar({ habits, onToggleCompletion }: HabitCalen
                                 <div className="ant-table-content">
                                     <table className="habit-table">
                                         <colgroup>
-                                            <col style={{ width: '120px' }} />
+                                            <col style={{ width: '200px', minWidth: '150px' }} />
                                             {days.map((_, i) => (
-                                                <col key={i} style={{ width: '40px' }} />
+                                                <col key={i} style={{ width: '35px', minWidth: '35px' }} />
                                             ))}
-                                            <col style={{ width: '80px' }} />
-                                            <col style={{ width: '80px' }} />
+                                            <col style={{ width: '60px', minWidth: '60px' }} />
+                                            <col style={{ width: '60px', minWidth: '60px' }} />
                                         </colgroup>
                                         <thead className="ant-table-thead">
                                             <tr>
