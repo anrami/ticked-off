@@ -7,7 +7,7 @@ export default function NavBar() {
         <nav className="navbar">
             <div className="navbar-left">
                 <Link href="/" className="logo">
-                    TickedOff
+                    TickedOff☑
                 </Link>
             </div>
             

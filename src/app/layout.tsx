@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ticked Off",
+  title: "TickedOff",
   description: "A Daily Habit Tracker",
 };
 
