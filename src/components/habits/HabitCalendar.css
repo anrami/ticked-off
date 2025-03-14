@@ -1,6 +1,8 @@
 /* Layout */
 .layout {
     padding-top: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Month Navigator */
