@@ -54,7 +54,7 @@ export default function HabitCalendar({ habits, onToggleCompletion }: HabitCalen
     return (
         <section className="ant-layout layout" style={{ paddingTop: '2rem' }}>
             <div className="ant-row">
-                <div className="ant-col habit-table-container ant-col-xs-24 ant-col-xs-offset-0 ant-col-sm-24 ant-col-sm-offset-0 ant-col-md-22 ant-col-md-offset-1">
+                <div className="ant-col habit-table-container mobile ant-col-xs-24 ant-col-xs-offset-0 ant-col-sm-24 ant-col-sm-offset-0 ant-col-md-22 ant-col-md-offset-1">
                     <h4 className="month-navigator">
                         <button onClick={() => navigateMonth('prev')} className="nav-button">
                             ←
@@ -73,12 +73,12 @@ export default function HabitCalendar({ habits, onToggleCompletion }: HabitCalen
                                 <div className="ant-table-content">
                                     <table className="habit-table">
                                         <colgroup>
-                                            <col style={{ width: '200px', minWidth: '150px' }} />
+                                            <col style={{ width: '15%' }} />
                                             {days.map((_, i) => (
-                                                <col key={i} style={{ width: '35px', minWidth: '35px' }} />
+                                                <col key={i} style={{ width: `${77/31}%` }} />
                                             ))}
-                                            <col style={{ width: '60px', minWidth: '60px' }} />
-                                            <col style={{ width: '60px', minWidth: '60px' }} />
+                                            <col style={{ width: '4%' }} />
+                                            <col style={{ width: '4%' }} />
                                         </colgroup>
                                         <thead className="ant-table-thead">
                                             <tr>
@@ -89,7 +89,7 @@ export default function HabitCalendar({ habits, onToggleCompletion }: HabitCalen
                                                     </th>
                                                 ))}
                                                 <th rowSpan={2} className="ant-table-cell highlight-th goal">Goal</th>
-                                                <th rowSpan={2} className="ant-table-cell highlight-th">Achieved</th>
+                                                <th rowSpan={2} className="ant-table-cell highlight-th">Done</th>
                                             </tr>
                                             <tr>
                                                 {days.map(day => (
@@ -101,7 +101,7 @@ export default function HabitCalendar({ habits, onToggleCompletion }: HabitCalen
                                             {habits.map(habit => (
                                                 <tr key={habit.id}>
                                                     <td className="ant-table-cell highlight-th">
-                                                        <div>{habit.name}</div>
+                                                        <div style={{ textAlign: 'left' }}>{habit.name}</div>
                                                     </td>
                                                     {days.map(day => {
                                                         const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);

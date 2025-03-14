@@ -2,7 +2,13 @@
 .layout {
     padding-top: 2rem;
     max-width: 100%;
-    overflow-x: hidden;
+}
+
+.habit-table-container {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Month Navigator */
@@ -11,6 +17,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .month-name {
@@ -34,6 +42,7 @@
 /* Table Styles */
 .ant-table-wrapper {
     clear: both;
+    width: 100%;
 }
 
 .ant-table {
@@ -62,20 +71,127 @@
     transition: background 0.3s;
 }
 
-/* Cell Styles */
+/* Desktop breakpoints */
+@media (min-width: 1440px) {
+    .ant-table-cell {
+        width: 5px;
+        min-width: 5px;
+        padding: 8px 6px !important;
+    }
+
+    .highlight-th {
+        width: 180px !important;
+        min-width: 180px !important;
+    }
+
+    .goal, .ant-table-cell:last-child {
+        width: 35px !important;
+        min-width: 35px !important;
+        padding: 6px 2px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .ant-table-cell {
+        width: 3px;
+        min-width: 3px;
+        padding: 8px 4px !important;
+    }
+
+    .highlight-th {
+        width: 160px !important;
+        min-width: 160px !important;
+    }
+
+    .goal, .ant-table-cell:last-child {
+        width: 35px !important;
+        min-width: 35px !important;
+        padding: 6px 2px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .ant-table-cell {
+        width: 28px;
+        min-width: 28px;
+        padding: 6px 4px !important;
+    }
+
+    .highlight-th {
+        width: 140px !important;
+        min-width: 140px !important;
+    }
+
+    .goal, .ant-table-cell:last-child {
+        width: 35px !important;
+        min-width: 35px !important;
+        padding: 6px 2px !important;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .habit-table-container {
+        border-radius: 0;
+        margin: 0 -1rem;
+        width: calc(100% + 2rem);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .ant-table {
+        font-size: 12px;
+    }
+
+    .ant-table table {
+        min-width: max-content;
+        table-layout: auto;
+    }
+
+    .highlight-th {
+        max-width: 120px !important;
+        min-width: 120px !important;
+        padding-left: 1rem !important;
+    }
+
+    .ant-table-cell {
+        min-width: 35px;
+        padding: 8px 4px !important;
+    }
+}
+
+/* Cell widths for desktop */
+.ant-table-cell {
+    width: 28px;
+    min-width: 28px;
+    padding: 6px 4px !important;
+    text-align: center;
+}
+
+.ant-table-cell.highlight-th {
+    text-align: left !important;
+}
+
 .highlight-th {
+    width: 140px !important;
+    min-width: 140px !important;
+    position: sticky;
+    left: 0;
+    z-index: 2;
     background: #fafafa !important;
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px;
+    padding-left: 12px !important;
+    text-align: left !important;
 }
 
-.th-day {
+.goal, .ant-table-cell:last-child {
+    width: 35px !important;
+    min-width: 35px !important;
+    padding: 6px 2px !important;
     text-align: center;
-    font-weight: normal;
-    color: #666;
 }
 
 .normal-cell {
