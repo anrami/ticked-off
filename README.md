@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![alt text](https://td6vw10lmp.ufs.sh/f/tUeDRE4SLPx82kqOJbupCwloTeIPVDdvY6B0WG79LOqaQ3ms)
+
+A simple habit tracking app.
 
 ## Getting Started
 
